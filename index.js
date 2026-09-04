@@ -1,7 +1,7 @@
 /**
  * dsh-plugin-last30days
- * Plugin Cordis per DeepSeek Harness (DSH)
- * Ricerca temporale multi-sorgente sugli ultimi 30 giorni (Reddit, X, YouTube, GitHub, HackerNews, Web).
+ * Cordis plugin for DeepSeek Harness (DSH)
+ * Multi-source temporal search across the last 30 days (Reddit, X, YouTube, GitHub, HackerNews, Web).
  */
 
 const SEARXNG_URL = process.env.SEARXNG_URL || 'http://searxng:8080';
@@ -55,7 +55,7 @@ export const inject = ['tools'];
 
 export function apply(ctx) {
   if (ctx.tools && typeof ctx.tools.register === 'function') {
-    // 1. Tool principale di ricerca temporale
+    // 1. Primary temporal search tool
     ctx.tools.register({
       name: 'last30days_search',
       description: 'Research what people and communities are saying about any topic in the last 30 days across Reddit, X, YouTube, GitHub, Hacker News and web.',
@@ -108,7 +108,7 @@ export function apply(ctx) {
       }
     });
 
-    // 2. Tool di diagnostica / health check
+    // 2. Diagnostic / health check tool
     ctx.tools.register({
       name: 'last30days_doctor',
       description: 'Check health and API configuration for the last30days temporal search system.',
