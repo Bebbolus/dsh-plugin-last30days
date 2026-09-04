@@ -1,0 +1,32 @@
+{
+  "name": "dsh-plugin-last30days",
+  "version": "1.0.0",
+  "description": "Last 30 Days Multi-Source Temporal Research Plugin for DeepSeek Harness (DSH)",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "cordis",
+    "research",
+    "last30days",
+    "temporal-search",
+    "osint",
+    "deepseek-harness"
+  ],
+  "author": "Bebbolus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bebbolus/dsh-plugin-last30days.git"
+  },
+  "homepage": "https://github.com/Bebbolus/dsh-plugin-last30days#readme",
+  "bugs": {
+    "url": "https://github.com/Bebbolus/dsh-plugin-last30days/issues"
+  },
+  "license": "MIT"
+}
