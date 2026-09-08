@@ -81,7 +81,7 @@ export function apply(ctx) {
             results: { type: 'array' }
           }
         },
-        render: (val) => JSON.stringify(val, null, 2)
+        render: (_args, val) => [{ type: 'text', text: typeof val === 'string' ? val : JSON.stringify(val, null, 2) }]
       },
       execute: async (args) => {
         const query = args.query;
@@ -121,7 +121,7 @@ export function apply(ctx) {
             providers: { type: 'object' }
           }
         },
-        render: (val) => JSON.stringify(val, null, 2)
+        render: (_args, val) => [{ type: 'text', text: typeof val === 'string' ? val : JSON.stringify(val, null, 2) }]
       },
       execute: async () => {
         const creds = getCredentials();
